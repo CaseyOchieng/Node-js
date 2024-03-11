@@ -6,8 +6,11 @@ const placesController = require('../controllers/places-controller');
 
 router.get('/:pid', placesController.getPlacebyId);
 
+router.get('/user/:uid', placesController.getPlacesByUserId);
 
-router.get('/user/:uid', placesController.getPlaceByUserId);
+router.patch('/:pid', placesController.updatePlace);
+
+router.delete('/:pid', placesController.deletePlace);
 
 router.post('/', placesController.createPlace);
 
